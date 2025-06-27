@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>District M - Hunian Modern & Alami</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
   <style>
     * {
       margin: 0;
@@ -32,25 +31,13 @@
       padding: 2rem;
       position: relative;
     }
-    header::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.4);
-      z-index: 1;
-    }
     header h1 {
       font-size: 4rem;
       font-weight: 900;
       text-transform: uppercase;
       letter-spacing: 2px;
       z-index: 2;
-      background-color: rgba(0,0,0,0.5);
-      padding: 0.5rem 1rem;
-      border-radius: 0.5rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
     }
     header p {
       font-size: 1.5rem;
@@ -140,17 +127,19 @@
       font-size: 1rem;
       color: #666;
     }
-    .house-type button {
+    .btn-detail {
+      display: inline-block;
       margin-top: 1rem;
+      padding: 0.5rem 1.25rem;
       background-color: #7cbb00;
       color: white;
-      border: none;
-      padding: 0.5rem 1rem;
+      text-decoration: none;
       border-radius: 0.5rem;
-      cursor: pointer;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
     }
-    .house-type button:hover {
-      background-color: #6aa400;
+    .btn-detail:hover {
+      background-color: #5fa000;
     }
     footer {
       background: #7cbb00;
@@ -159,110 +148,241 @@
       padding: 2rem;
       margin-top: 4rem;
     }
-    .btn-detail {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.5rem 1.25rem;
-  background-color: #7cbb00;
-  color: white;
-  text-decoration: none;
-  border-radius: 0.5rem;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
-}
-.btn-detail:hover {
-  background-color: #5fa000;
-}
+    .gallery {
+      gap: 2rem;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .map-container {
+      margin-top: 4rem;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+    iframe {
+      width: 100%;
+      height: 450px;
+      border: 0;
+      border-radius: 1rem;
+    }
+    .map-info {
+      background-color: #f5f5f5;
+      padding: 2rem;
+      border-radius: 1rem;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .map-info h3 {
+      margin-bottom: 1rem;
+      color: #7cbb00;
+      font-size: 1.75rem;
+    }
+    .map-info p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+    .map-info ul {
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+    .cta-footer {
+      background-color: #eef8e6;
+      padding: 3rem 2rem;
+      text-align: center;
+      margin-top: 4rem;
+    }
+    .cta-footer h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .cta-footer p {
+      margin-bottom: 2rem;
+      font-size: 1rem;
+    }
+    .cta-footer .btn-footer {
+      display: inline-block;
+      background-color: #7cbb00;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      margin: 0.5rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+    .cta-footer .btn-footer:hover {
+      background-color: #5fa000;
+    }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+      }
+      header p {
+        font-size: 1rem;
+      }
+      nav ul {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .features, .gallery, .house-types {
+        grid-template-columns: 1fr;
+      }
+      .house-type img {
+        height: auto;
+      }
+      .gallery {
+        gap: 1.5rem;
+      }
+      .gallery img {
+        width: 100%;
+        height: auto;
+      }
+      .advantages {
+        padding: 2rem 1rem;
+      }
+      .section {
+        padding: 2rem 1rem;
+      }
+      .map-container {
+        grid-template-columns: 1fr;
+      }
+      iframe {
+        height: 300px;
+      }
+    }
   </style>
 </head>
 <body>
-  <nav>
-    <h2>District M</h2>
-    <ul>
-      <li><a href="#advantages">Keunggulan</a></li>
-      <li><a href="#mengapa">Tentang</a></li>
-      <li><a href="#tipe">Tipe Rumah</a></li>
-      <li><a href="#galeri">Galeri</a></li>
-    </ul>
-  </nav>
 
-  <header>
-    <h1>District M</h1>
-    <p>Hunian Modern & Alami yang Dirancang untuk Masa Depan Anda</p>
-  </header>
+<nav>
+  <h2>District M</h2>
+  <ul>
+    <li><a href="#advantages">Keunggulan</a></li>
+    <li><a href="#mengapa">Tentang</a></li>
+    <li><a href="#tipe">Tipe Rumah</a></li>
+    <li><a href="#galeri">Galeri</a></li>
+  </ul>
+</nav>
 
-  <section class="advantages" id="advantages">
-    <h2>8P District M Advantages</h2>
-    <ul>
-      <li><strong>PRODUCT:</strong> Tenang, Aman, Gate and One Gate System, 24 jam Security Guards, Bebas Banjir dan Tanah Longsor, Batu alam pada carport dan dinding luar, Landscape dan lampu taman, semua type 3KT min 2KM tempat cuci setrika, Rumah sudah tersedia, View Gunung Klabat.</li>
-      <li><strong>PAPER:</strong> Sertifikat sudah dipecah per unit dan IMB, juga PBB per unit.</li>
-      <li><strong>PLACE:</strong> Dekat sarana umum Rumah ibadah, Airport, Rumah Sakit, SPBU, Pasar basah, Transmart juga Fresmart, Dekat sarana Pendidikan Unklab, MIS, Politeknik etc.</li>
-      <li><strong>PRICE:</strong> Harga Terjangkau dengan Nilai Investasi yang terus naik.</li>
-      <li><strong>PROVISION:</strong> Shuttlebus, Central Water System dilengkapi dengan Function Room, Sportplex, Swimming Pool & Chapel, M Mart, Akan dibangun Water Park.</li>
-      <li><strong>PERMANENT TENANT:</strong> Penghuni dari manca Negara Kesempatan bagi anak-anak untuk dapat meningkatkan kemampuan berbahasa inggris.</li>
-      <li><strong>PAYMENT TERM:</strong> Nikmati Berbagai discount atau Voucher pada MIS dan Fasilitas lain di kawasan District M Seperti Minimart, Waterpark, Resort dll.</li>
-      <li><strong>POST SALES:</strong> Bebas Biaya Penggunaan Fasilitas (Swimming pool, Fitness Centre, Sport Hall, dll).</li>
-    </ul>
-  </section>
+<header>
+  <h1>District M</h1>
+  <p>Hunian Modern & Alami yang Dirancang untuk Masa Depan Anda</p>
+</header>
 
-  <section class="section" id="mengapa">
-    <h2>Mengapa District M?</h2>
-    <p>District M adalah hunian dengan konsep Boutique Residence yang memadukan desain modern dan keindahan alam. Terletak di kawasan yang tenang dan strategis, setiap sudut didesain untuk menghadirkan kenyamanan, keamanan, dan kualitas hidup terbaik bagi Anda dan keluarga.</p>
-    <div class="features">
-      <div class="feature">
-        <img src="icon-nature.png" alt="Nature">
-        <h3>Dekat Alam</h3>
-        <p>Udara segar, ruang hijau, dan lingkungan alami yang asri.</p>
-      </div>
-      <div class="feature">
-        <img src="icon-facility.png" alt="Facilities">
-        <h3>Fasilitas Lengkap</h3>
-        <p>Kolam renang, gym, jalur pejalan kaki, dan area komunitas.</p>
-      </div>
-      <div class="feature">
-        <img src="icon-community.png" alt="Community">
-        <h3>Komunitas Global</h3>
-        <p>Lingkungan inklusif, cocok untuk keluarga lokal dan ekspatriat.</p>
-      </div>
+<section class="advantages" id="advantages">
+  <h2>8P District M Advantages</h2>
+  <ul>
+    <li><strong>PRODUCT:</strong> Tenang, Aman, Gate System, 24 Jam Security, Bebas Banjir & Longsor, View Gunung Klabat.</li>
+    <li><strong>PAPER:</strong> Sertifikat & IMB per unit.</li>
+    <li><strong>PLACE:</strong> Dekat Unklab, MIS, Rumah Ibadah, RS, Transmart.</li>
+    <li><strong>PRICE:</strong> Terjangkau & Investasi Bernilai Tinggi.</li>
+    <li><strong>PROVISION:</strong> Shuttlebus, Swimming Pool, Function Room, Sportplex, Chapel.</li>
+    <li><strong>PERMANENT TENANT:</strong> Komunitas Multinasional, Suasana Berbahasa Inggris.</li>
+    <li><strong>PAYMENT TERM:</strong> Diskon & Voucher Khusus di Fasilitas District M.</li>
+    <li><strong>POST SALES:</strong> Bebas Biaya Fasilitas (Kolam Renang, Fitness, Sport Hall).</li>
+  </ul>
+</section>
+
+<section class="section" id="mengapa">
+  <h2>Mengapa District M?</h2>
+  <p>District M adalah Boutique Residence yang memadukan desain modern dengan keindahan alam. Lokasi strategis, nyaman, dan aman untuk keluarga Anda.</p>
+  <div class="features">
+    <div class="feature">
+      <img src="icon-nature.png" alt="Nature">
+      <h3>Dekat Alam</h3>
+      <p>Udara segar, ruang hijau, dan lingkungan asri.</p>
     </div>
-  </section>
-
-  <section class="section" id="tipe">
-  <h2>Pilihan Tipe Rumah</h2>
-  <div class="house-types">
-    <div class="house-type">
-      <img src="misawa.jpg" alt="Misawa 60/102">
-      <h3>Misawa – Tipe 60/102</h3>
-      <p>Desain minimalis dengan ruang yang fungsional dan nyaman.</p>
-      <a href="misawa.html" class="btn-detail">Lihat Detail</a>
+    <div class="feature">
+      <img src="icon-facility.png" alt="Facilities">
+      <h3>Fasilitas Lengkap</h3>
+      <p>Kolam renang, gym, area komunitas & pejalan kaki.</p>
     </div>
-    <div class="house-type">
-      <img src="mishawaka.jpg" alt="Mishawaka 114/102">
-      <h3>Mishawaka – Tipe 114/102</h3>
-      <p>Lebih luas untuk keluarga besar, dengan tata ruang lega dan modern.</p>
-      <a href="mishawaka.html" class="btn-detail">Lihat Detail</a>
-    </div>
-    <div class="house-type">
-      <img src="mission.jpg" alt="Mission 60/102">
-      <h3>Mission – Tipe 60/102</h3>
-      <p>Efisien namun tetap nyaman untuk gaya hidup modern.</p>
-      <a href="mission.html" class="btn-detail">Lihat Detail</a>
+    <div class="feature">
+      <img src="icon-community.png" alt="Community">
+      <h3>Komunitas Global</h3>
+      <p>Lingkungan inklusif untuk lokal & ekspatriat.</p>
     </div>
   </div>
 </section>
 
-  <section class="section" id="galeri">
-    <h2>Galeri</h2>
-    <div class="gallery">
-      <img src="gallery1.jpg" alt="District M View">
-      <img src="gallery2.jpg" alt="Green Space">
-      <img src="gallery3.jpg" alt="Facilities">
-    </div>
-  </section>
+<section class="section map-container">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12749.51975993119!2d124.9325851!3d1.4754851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32870b27606a0877%3A0x4f76375bcf82040b!2sDistrict%20M%20-%20The%20lifestyle%20living!5e0!3m2!1sid!2sid!4v1719488888888!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <div class="map-info">
+    <h3>Temukan kualitas hidup premium di District M</h3>
+    <p>Tempat eksklusif yang memadukan kenyamanan dan keindahan alam.</p>
+    <ul>
+      <li>- 5 menit ke Sentra Medika Hospital</li>
+      <li>- 5 menit ke Manado Independent School</li>
+      <li>- 15 menit ke Bandara Sam Ratulangi Manado</li>
+      <li>- 30 menit ke Pusat Kota Manado</li>
+    </ul>
+  </div>
+</section>
 
-  <footer>
-    <p>&copy; 2025 District M. Hunian Modern & Alami.</p>
-  </footer>
+<section class="section" id="tipe">
+  <h2>Pilihan Tipe Rumah</h2>
+  <div class="house-types">
+    <div class="house-type">
+      <img src="misawa.jpg" alt="Misawa">
+      <h3>Misawa – Tipe 60/102</h3>
+      <p>Desain minimalis, fungsional & nyaman.</p>
+      <a href="/District-M/misawa.html" class="btn-detail">Lihat Detail</a>
+    </div>
+    <div class="house-type">
+      <img src="mishawaka.jpg" alt="Mishawaka">
+      <h3>Mishawaka – Tipe 114/102</h3>
+      <p>Lebih luas, ideal untuk keluarga besar.</p>
+      <a href="/District-M/mishawaka.html" class="btn-detail">Lihat Detail</a>
+    </div>
+    <div class="house-type">
+      <img src="mission.jpg" alt="Mission">
+      <h3>Mission – Tipe 60/102</h3>
+      <p>Efisien & nyaman untuk gaya hidup modern.</p>
+      <a href="/District-M/mission.html" class="btn-detail">Lihat Detail</a>
+    </div>
+  </div>
+</section>
+
+<section class="section map-container">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12749.51975993119!2d124.9325851!3d1.4754851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32870b27606a0877%3A0x4f76375bcf82040b!2sDistrict%20M%20-%20The%20lifestyle%20living!5e0!3m2!1sid!2sid!4v1719488888888!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <div class="map-info">
+    <h3>Temukan kualitas hidup premium di District M</h3>
+    <p>Tempat eksklusif yang memadukan kenyamanan dan keindahan alam.</p>
+    <ul>
+      <li>- 5 menit ke Sentra Medika Hospital</li>
+      <li>- 5 menit ke Manado Independent School</li>
+      <li>- 15 menit ke Bandara Sam Ratulangi Manado</li>
+      <li>- 30 menit ke Pusat Kota Manado</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="galeri">
+  <h2>Galeri</h2>
+  <div class="gallery">
+    <img src="gallery1.jpg" alt="View">
+    <img src="gallery2.jpg" alt="Green Space">
+    <img src="gallery3.jpg" alt="Facilities">
+    <img src="kolam-renang.jpg" alt="Kolam Renang">
+    <img src="gym.jpg" alt="Gym">
+  </div>
+</section>
+
+<section class="cta-footer">
+  <h2>Punya pertanyaan?</h2>
+  <p>Jangan ragu untuk menghubungi kami dan biarkan tim kami membantu Anda.</p>
+  <a href="#" class="btn-footer">HUBUNGI KAMI</a>
+  <a href="https://wa.me/6281234567890" target="_blank" class="btn-footer">HUBUNGI VIA WHATSAPP</a>
+</section>
+
+<footer>
+  <p>&copy; 2025 District M. Hunian Modern & Alami.</p>
+</footer>
 
 </body>
 </html>
