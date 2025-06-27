@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>District M - Hunian Modern & Alami</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      background-color: #fff;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background-image: url('cover-districtm.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      color: white;
+      padding: 2rem;
+      position: relative;
+    }
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+    header h1 {
+      font-size: 4rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      z-index: 2;
+      background-color: rgba(0,0,0,0.5);
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+    }
+    header p {
+      font-size: 1.5rem;
+      margin-top: 1rem;
+      z-index: 2;
+    }
+    nav {
+      background: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    nav h2 {
+      font-size: 1.75rem;
+      color: #7cbb00;
+      font-weight: 800;
+    }
+    nav ul {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+    .section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .section h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .features, .gallery, .house-types {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .feature, .gallery img, .house-type {
+      border-radius: 1rem;
+    }
+    .feature {
+      background: #f5f5f5;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .feature img {
+      max-width: 64px;
+      margin-bottom: 1rem;
+    }
+    .advantages {
+      background-color: #eef8e6;
+      padding: 3rem 2rem;
+      border-radius: 1rem;
+      margin-top: 3rem;
+    }
+    .advantages h2 {
+      color: #7cbb00;
+      margin-bottom: 1.5rem;
+    }
+    .advantages ul {
+      padding-left: 1.25rem;
+    }
+    .house-type img {
+      width: 100%;
+      border-radius: 1rem;
+      object-fit: cover;
+      height: 200px;
+    }
+    .house-type h3 {
+      margin-top: 1rem;
+      font-size: 1.25rem;
+      color: #333;
+    }
+    .house-type p {
+      font-size: 1rem;
+      color: #666;
+    }
+    .house-type button {
+      margin-top: 1rem;
+      background-color: #7cbb00;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+    }
+    .house-type button:hover {
+      background-color: #6aa400;
+    }
+    footer {
+      background: #7cbb00;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 4rem;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <h2>District M</h2>
+    <ul>
+      <li><a href="#advantages">Keunggulan</a></li>
+      <li><a href="#mengapa">Tentang</a></li>
+      <li><a href="#tipe">Tipe Rumah</a></li>
+      <li><a href="#galeri">Galeri</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>District M</h1>
+    <p>Hunian Modern & Alami yang Dirancang untuk Masa Depan Anda</p>
+  </header>
+
+  <section class="advantages" id="advantages">
+    <h2>8P District M Advantages</h2>
+    <ul>
+      <li><strong>PRODUCT:</strong> Tenang, Aman, Gate and One Gate System, 24 jam Security Guards, Bebas Banjir dan Tanah Longsor, Batu alam pada carport dan dinding luar, Landscape dan lampu taman, semua type 3KT min 2KM tempat cuci setrika, Rumah sudah tersedia, View Gunung Klabat.</li>
+      <li><strong>PAPER:</strong> Sertifikat sudah dipecah per unit dan IMB, juga PBB per unit.</li>
+      <li><strong>PLACE:</strong> Dekat sarana umum Rumah ibadah, Airport, Rumah Sakit, SPBU, Pasar basah, Transmart juga Fresmart, Dekat sarana Pendidikan Unklab, MIS, Politeknik etc.</li>
+      <li><strong>PRICE:</strong> Harga Terjangkau dengan Nilai Investasi yang terus naik.</li>
+      <li><strong>PROVISION:</strong> Shuttlebus, Central Water System dilengkapi dengan Function Room, Sportplex, Swimming Pool & Chapel, M Mart, Akan dibangun Water Park.</li>
+      <li><strong>PERMANENT TENANT:</strong> Penghuni dari manca Negara Kesempatan bagi anak-anak untuk dapat meningkatkan kemampuan berbahasa inggris.</li>
+      <li><strong>PAYMENT TERM:</strong> Nikmati Berbagai discount atau Voucher pada MIS dan Fasilitas lain di kawasan District M Seperti Minimart, Waterpark, Resort dll.</li>
+      <li><strong>POST SALES:</strong> Bebas Biaya Penggunaan Fasilitas (Swimming pool, Fitness Centre, Sport Hall, dll).</li>
+    </ul>
+  </section>
+
+  <section class="section" id="mengapa">
+    <h2>Mengapa District M?</h2>
+    <p>District M adalah hunian dengan konsep Boutique Residence yang memadukan desain modern dan keindahan alam. Terletak di kawasan yang tenang dan strategis, setiap sudut didesain untuk menghadirkan kenyamanan, keamanan, dan kualitas hidup terbaik bagi Anda dan keluarga.</p>
+    <div class="features">
+      <div class="feature">
+        <img src="icon-nature.png" alt="Nature">
+        <h3>Dekat Alam</h3>
+        <p>Udara segar, ruang hijau, dan lingkungan alami yang asri.</p>
+      </div>
+      <div class="feature">
+        <img src="icon-facility.png" alt="Facilities">
+        <h3>Fasilitas Lengkap</h3>
+        <p>Kolam renang, gym, jalur pejalan kaki, dan area komunitas.</p>
+      </div>
+      <div class="feature">
+        <img src="icon-community.png" alt="Community">
+        <h3>Komunitas Global</h3>
+        <p>Lingkungan inklusif, cocok untuk keluarga lokal dan ekspatriat.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="tipe">
+    <h2>Pilihan Tipe Rumah</h2>
+    <div class="house-types">
+      <div class="house-type">
+        <img src="misawa.jpg" alt="Misawa 60/102">
+        <h3>Misawa – Tipe 60/102</h3>
+        <p>Desain minimalis dengan ruang yang fungsional dan nyaman.</p>
+        <button onclick="alert('Detail Misawa: Tipe 60/102, 3 Kamar Tidur, 2 Kamar Mandi, Carport, Taman')">Detail Misawa</button>
+      </div>
+      <div class="house-type">
+        <img src="mishawaka.jpg" alt="Mishawaka 114/102">
+        <h3>Mishawaka – Tipe 114/102</h3>
+        <p>Lebih luas untuk keluarga besar, dengan tata ruang lega dan modern.</p>
+        <button onclick="alert('Detail Mishawaka: Tipe 114/102, 4 Kamar Tidur, 3 Kamar Mandi, 2 Lantai, Carport dan Balkon')">Detail Mishawaka</button>
+      </div>
+      <div class="house-type">
+        <img src="mission.jpg" alt="Mission 60/102">
+        <h3>Mission – Tipe 60/102</h3>
+        <p>Efisien namun tetap nyaman untuk gaya hidup modern.</p>
+        <button onclick="alert('Detail Mission: Tipe 60/102, 2 Kamar Tidur, 1 Kamar Mandi, Carport, Cocok untuk Pasangan Muda')">Detail Mission</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="galeri">
+    <h2>Galeri</h2>
+    <div class="gallery">
+      <img src="gallery1.jpg" alt="District M View">
+      <img src="gallery2.jpg" alt="Green Space">
+      <img src="gallery3.jpg" alt="Facilities">
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 District M. Hunian Modern & Alami.</p>
+  </footer>
+
+</body>
+</html>
