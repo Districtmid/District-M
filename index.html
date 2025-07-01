@@ -18,6 +18,43 @@
       color: #333;
       line-height: 1.6;
     }
+    nav {
+      background: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    nav h2 {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.75rem;
+      color: #7cbb00;
+      font-weight: 800;
+    }
+    nav h2 img {
+      height: 36px;
+      width: auto;
+    }
+    nav ul {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover {
+      color: #7cbb00;
+    }
     header {
       background-image: url('cover-districtm.jpg');
       background-size: cover;
@@ -32,13 +69,23 @@
       padding: 2rem;
       position: relative;
     }
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.1);
+      z-index: 1;
+    }
     header h1 {
       font-size: 4rem;
       font-weight: 900;
       text-transform: uppercase;
       letter-spacing: 2px;
       z-index: 2;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
     }
     header p {
       font-size: 1.5rem;
