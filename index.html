@@ -1,12 +1,13 @@
 <!DOCTYPE html>
+
 <html lang="id">
 <head>
-  <link rel="icon" href="icon.png" type="image/png">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>District M - Hunian Modern & Alami</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <style>
+<link href="icon.png" rel="icon" type="image/png"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>District M - Hunian Modern &amp; Alami</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet"/>
+<style>
     * {
       margin: 0;
       padding: 0;
@@ -303,189 +304,250 @@
         height: 300px;
       }
     }
-  </style>
+  
+.fasilitas-section {
+  background-color: #1f4d45;
+  color: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
+}
+.container-fasilitas h2 {
+  font-size: 28px;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+.fasilitas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.fasilitas-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.fasilitas-item img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 10px;
+  filter: brightness(0) invert(1);
+}
+.fasilitas-item p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.masterplan {
+  text-align: center;
+  margin-top: 4rem;
+}
+.masterplan h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+.masterplan-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8);
+}
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 1000px;
+  transition: 0.3s;
+  border-radius: 1rem;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  cursor: zoom-in;
+}
+.modal-content:hover {
+  transform: scale(1.05);
+}
+.close {
+  position: absolute;
+  top: 30px;
+  right: 45px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.close:hover {
+  color: #bbb;
+}
+</style>
 </head>
 <body>
-
 <nav>
-   <h2>
-    <img src="logo-districtm.png" alt="Logo District M">
+<h2>
+<img alt="Logo District M" src="logo-districtm.png"/>
     District M
   </h2>
-  <ul>
-    <li><a href="#advantages">Keunggulan</a></li>
-    <li><a href="#mengapa">Tentang</a></li>
-    <li><a href="#tipe">Tipe Rumah</a></li>
-    <li><a href="#galeri">Galeri</a></li>
-  </ul>
+<ul>
+<li><a href="#advantages">Keunggulan</a></li>
+<li><a href="#mengapa">Tentang</a></li>
+<li><a href="#tipe">Tipe Rumah</a></li>
+<li><a href="#galeri">Galeri</a></li>
+</ul>
 </nav>
-
 <header>
-  <h1>District M</h1>
-  <p>Hunian Modern & Alami yang Dirancang untuk Masa Depan Anda</p>
+<h1>District M</h1>
+<p>Hunian Modern &amp; Alami yang Dirancang untuk Masa Depan Anda</p>
 </header>
-
 <section class="advantages" id="advantages">
-  <h2>8P District M Advantages</h2>
-  <ul>
-    <li><strong>PRODUCT:</strong> Tenang, Aman, Gate System, 24 Jam Security, Bebas Banjir & Longsor, View Gunung Klabat.</li>
-    <li><strong>PAPER:</strong> Sertifikat & IMB per unit.</li>
-    <li><strong>PLACE:</strong> Dekat Unklab, MIS, Rumah Ibadah, RS, Transmart.</li>
-    <li><strong>PRICE:</strong> Terjangkau & Investasi Bernilai Tinggi.</li>
-    <li><strong>PROVISION:</strong> Shuttlebus, Swimming Pool, Function Room, Sportplex, Chapel.</li>
-    <li><strong>PERMANENT TENANT:</strong> Komunitas Multinasional, Suasana Berbahasa Inggris.</li>
-    <li><strong>PAYMENT TERM:</strong> Diskon & Voucher Khusus di Fasilitas District M.</li>
-    <li><strong>POST SALES:</strong> Bebas Biaya Fasilitas (Kolam Renang, Fitness, Sport Hall).</li>
-  </ul>
+<h2>8P District M Advantages</h2>
+<ul>
+<li><strong>PRODUCT:</strong> Tenang, Aman, Gate System, 24 Jam Security, Bebas Banjir &amp; Longsor, View Gunung Klabat.</li>
+<li><strong>PAPER:</strong> Sertifikat &amp; IMB per unit.</li>
+<li><strong>PLACE:</strong> Dekat Unklab, MIS, Rumah Ibadah, RS, Transmart.</li>
+<li><strong>PRICE:</strong> Terjangkau &amp; Investasi Bernilai Tinggi.</li>
+<li><strong>PROVISION:</strong> Shuttlebus, Swimming Pool, Function Room, Sportplex, Chapel.</li>
+<li><strong>PERMANENT TENANT:</strong> Komunitas Multinasional, Suasana Berbahasa Inggris.</li>
+<li><strong>PAYMENT TERM:</strong> Diskon &amp; Voucher Khusus di Fasilitas District M.</li>
+<li><strong>POST SALES:</strong> Bebas Biaya Fasilitas (Kolam Renang, Fitness, Sport Hall).</li>
+</ul>
 </section>
-
-<section class="facility-section">
-  <h2>Fasilitas District M</h2>
-  <div class="facility-list">
-    <div class="facility-item">
-      <img src="icon-gate.png" alt="Keamanan">
-      <h4>Gerbang & Keamanan 24 Jam</h4>
-    </div>
-    <div class="facility-item">
-      <img src="icon-water.png" alt="Water System">
-      <h4>Water System</h4>
-    </div>
-    <div class="facility-item">
-      <img src="icon-genset.png" alt="Genset">
-      <h4>Genset</h4>
-    </div>
-    <div class="facility-item">
-      <img src="icon-shuttle.png" alt="Shuttle Bus">
-      <h4>Shuttle Bus</h4>
-    </div>
-    <div class="facility-item">
-      <img src="icon-minimart.png" alt="Minimart">
-      <h4>Minimart</h4>
-    </div>
-    <div class="facility-item">
-      <img src="icon-restaurant.png" alt="Restaurant">
-      <h4>Restaurant</h4>
-    </div>
-    <div class="facility-item">
-      <img src="icon-function.png" alt="Function Room">
-      <h4>Function Room</h4>
-    </div>
-    <div class="facility-item">
-      <img src="icon-study.png" alt="Study Room">
-      <h4>Study Room</h4>
-    </div>
-    <div class="facility-item">
-      <img src="icon-sport.png" alt="Sportplex">
-      <h4>Sportplex (Basketball, Tennis, dll)</h4>
-    </div>
-    <div class="facility-item">
-      <img src="icon-fitness.png" alt="Fitness">
-      <h4>Fitness Center (Yoga, Zumba, Aerobics)</h4>
-    </div>
-    <div class="facility-item">
-      <img src="icon-swimming.png" alt="Swimming Pool">
-      <h4>Swimming Pool</h4>
-    </div>
-    <div class="facility-item">
-      <img src="icon-playground.png" alt="Playground">
-      <h4>Children's Playground</h4>
-    </div>
-    <div class="facility-item">
-      <img src="icon-landscape.png" alt="Landscape">
-      <h4>Home Landscape</h4>
-    </div>
-    <div class="facility-item">
-      <img src="icon-park.png" alt="Recreation Park">
-      <h4>Recreation Park (Gazebo & BBQ)</h4>
-    </div>
-    <div class="facility-item">
-      <img src="icon-jogging.png" alt="Jogging Track">
-      <h4>Jogging Track</h4>
-    </div>
-  </div>
-</section>  
-  
+<section class="fasilitas-section" id="fasilitas">
+<div class="container-fasilitas">
+<h2>FASILITAS</h2>
+<div class="fasilitas-grid">
+<div class="fasilitas-item"><img alt="Gerbang &amp; Keamanan 24 Jam" src="icon-gate.png"/><p>Gerbang &amp; Keamanan 24 Jam</p></div>
+<div class="fasilitas-item"><img alt="Water System" src="icon-water.png"/><p>Water System</p></div>
+<div class="fasilitas-item"><img alt="Genset" src="icon-genset.png"/><p>Genset</p></div>
+<div class="fasilitas-item"><img alt="Shuttle Bus" src="icon-shuttle.png"/><p>Shuttle Bus</p></div>
+<div class="fasilitas-item"><img alt="Minimart" src="icon-minimart.png"/><p>Minimart</p></div>
+<div class="fasilitas-item"><img alt="Restaurant" src="icon-restaurant.png"/><p>Restaurant</p></div>
+<div class="fasilitas-item"><img alt="Function Room" src="icon-function.png"/><p>Function Room</p></div>
+<div class="fasilitas-item"><img alt="Study Room" src="icon-study.png"/><p>Study Room</p></div>
+<div class="fasilitas-item"><img alt="Sportplex (Basketball, Tennis, dll)" src="icon-sport.png"/><p>Sportplex (Basketball, Tennis, dll)</p></div>
+<div class="fasilitas-item"><img alt="Fitness Center (Yoga, Zumba, Aerobics)" src="icon-fitness.png"/><p>Fitness Center (Yoga, Zumba, Aerobics)</p></div>
+<div class="fasilitas-item"><img alt="Swimming Pool" src="icon-swimming.png"/><p>Swimming Pool</p></div>
+<div class="fasilitas-item"><img alt="Children's Playground" src="icon-playground.png"/><p>Children's Playground</p></div>
+<div class="fasilitas-item"><img alt="Home Landscape" src="icon-landscape.png"/><p>Home Landscape</p></div>
+<div class="fasilitas-item"><img alt="Recreation Park (Gazebo &amp; BBQ)" src="icon-park.png"/><p>Recreation Park (Gazebo &amp; BBQ)</p></div>
+<div class="fasilitas-item"><img alt="Jogging Track" src="icon-jogging.png"/><p>Jogging Track</p></div>
+</div>
+</div>
+</section>
 <section class="section" id="mengapa">
-  <h2>Mengapa District M?</h2>
-  <p>District M adalah Boutique Residence yang memadukan desain modern dengan keindahan alam. Lokasi strategis, nyaman, dan aman untuk keluarga Anda.</p>
-  <div class="features">
-    <div class="feature">
-      <img src="icon-nature.png" alt="Nature">
-      <h3>Dekat Alam</h3>
-      <p>Udara segar, ruang hijau, dan lingkungan asri.</p>
-    </div>
-    <div class="feature">
-      <img src="icon-facility.png" alt="Facilities">
-      <h3>Fasilitas Lengkap</h3>
-      <p>Kolam renang, gym, area komunitas & pejalan kaki.</p>
-    </div>
-    <div class="feature">
-      <img src="icon-community.png" alt="Community">
-      <h3>Komunitas Global</h3>
-      <p>Lingkungan inklusif untuk lokal & ekspatriat.</p>
-    </div>
-  </div>
+<h2>Mengapa District M?</h2>
+<p>District M adalah Boutique Residence yang memadukan desain modern dengan keindahan alam. Lokasi strategis, nyaman, dan aman untuk keluarga Anda.</p>
+<div class="features">
+<div class="feature">
+<img alt="Nature" src="icon-nature.png"/>
+<h3>Dekat Alam</h3>
+<p>Udara segar, ruang hijau, dan lingkungan asri.</p>
+</div>
+<div class="feature">
+<img alt="Facilities" src="icon-facility.png"/>
+<h3>Fasilitas Lengkap</h3>
+<p>Kolam renang, gym, area komunitas &amp; pejalan kaki.</p>
+</div>
+<div class="feature">
+<img alt="Community" src="icon-community.png"/>
+<h3>Komunitas Global</h3>
+<p>Lingkungan inklusif untuk lokal &amp; ekspatriat.</p>
+</div>
+</div>
 </section>
-
 <section class="section" id="tipe">
-  <h2>Pilihan Tipe Rumah</h2>
-  <div class="house-types">
-    <div class="house-type">
-      <img src="misawa.jpg" alt="Misawa">
-      <h3>Misawa – Tipe 60/102</h3>
-      <p>Desain minimalis, fungsional & nyaman.</p>
-      <a href="/District-M/misawa.html" class="btn-detail">Lihat Detail</a>
-    </div>
-    <div class="house-type">
-      <img src="mishawaka.jpg" alt="Mishawaka">
-      <h3>Mishawaka – Tipe 114/102</h3>
-      <p>Lebih luas, ideal untuk keluarga besar.</p>
-      <a href="/District-M/mishawaka.html" class="btn-detail">Lihat Detail</a>
-    </div>
-    <div class="house-type">
-      <img src="mission.jpg" alt="Mission">
-      <h3>Mission – Tipe 60/102</h3>
-      <p>Efisien & nyaman untuk gaya hidup modern.</p>
-      <a href="/District-M/mission.html" class="btn-detail">Lihat Detail</a>
-    </div>
-  </div>
+<h2>Pilihan Tipe Rumah</h2>
+<div class="house-types">
+<div class="house-type">
+<img alt="Misawa" src="misawa.jpg"/>
+<h3>Misawa – Tipe 60/102</h3>
+<p>Desain minimalis, fungsional &amp; nyaman.</p>
+<a class="btn-detail" href="/District-M/misawa.html">Lihat Detail</a>
+</div>
+<div class="house-type">
+<img alt="Mishawaka" src="mishawaka.jpg"/>
+<h3>Mishawaka – Tipe 114/102</h3>
+<p>Lebih luas, ideal untuk keluarga besar.</p>
+<a class="btn-detail" href="/District-M/mishawaka.html">Lihat Detail</a>
+</div>
+<div class="house-type">
+<img alt="Mission" src="mission.jpg"/>
+<h3>Mission – Tipe 60/102</h3>
+<p>Efisien &amp; nyaman untuk gaya hidup modern.</p>
+<a class="btn-detail" href="/District-M/mission.html">Lihat Detail</a>
+</div>
+</div>
 </section>
-
 <section class="section map-container">
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12749.51975993119!2d124.9325851!3d1.4754851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32870b27606a0877%3A0x4f76375bcf82040b!2sDistrict%20M%20-%20The%20lifestyle%20living!5e0!3m2!1sid!2sid!4v1719488888888!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  <div class="map-info">
-    <h3>Temukan kualitas hidup premium di District M</h3>
-    <p>Tempat eksklusif yang memadukan kenyamanan dan keindahan alam.</p>
-    <ul>
-      <li>- 5 menit ke Sentra Medika Hospital</li>
-      <li>- 5 menit ke Manado Independent School</li>
-      <li>- 15 menit ke Bandara Sam Ratulangi Manado</li>
-      <li>- 30 menit ke Pusat Kota Manado</li>
-    </ul>
-  </div>
+<iframe allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12749.51975993119!2d124.9325851!3d1.4754851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32870b27606a0877%3A0x4f76375bcf82040b!2sDistrict%20M%20-%20The%20lifestyle%20living!5e0!3m2!1sid!2sid!4v1719488888888!5m2!1sid!2sid"></iframe>
+<div class="map-info">
+<h3>Temukan kualitas hidup premium di District M</h3>
+<p>Tempat eksklusif yang memadukan kenyamanan dan keindahan alam.</p>
+<ul>
+<li>- 5 menit ke Sentra Medika Hospital</li>
+<li>- 5 menit ke Manado Independent School</li>
+<li>- 15 menit ke Bandara Sam Ratulangi Manado</li>
+<li>- 30 menit ke Pusat Kota Manado</li>
+</ul>
+</div>
 </section>
+<section class="section">
+<h2 style="text-align:center">Masterplan District M</h2>
+<div style="text-align:center">
+<button id="openMasterplan" style="padding: 0.75rem 1.5rem; background-color: #7cbb00; color: white; border: none; border-radius: 0.5rem; font-weight: 600; cursor: pointer;">Lihat Masterplan</button>
+</div>
+</section>
+<div class="modal" id="masterplanModal">
+<span class="close">×</span>
+<img alt="Masterplan District M" class="modal-content" id="masterplanImg" src="img/masterplan-districtm.jpg"/>
+</div>
+
 
 <section class="section" id="galeri">
-  <h2>Galeri</h2>
-  <div class="gallery">
-    <img src="gallery1.jpg" alt="View">
-    <img src="gallery2.jpg" alt="Green Space">
-    <img src="gallery3.jpg" alt="Facilities">
-    <img src="kolam-renang.jpg" alt="Kolam Renang">
-    <img src="gym.jpg" alt="Gym">
-  </div>
+<h2>Galeri</h2>
+<div class="gallery">
+<img alt="View" src="gallery1.jpg"/>
+<img alt="Green Space" src="gallery2.jpg"/>
+<img alt="Kolam Renang" src="kolam-renang.jpg"/>
+<img alt="Facilities" src="gallery3.png"/>
+<img alt="Gym" src="gym.jpg"/>
+</div>
 </section>
-
 <section class="cta-footer">
-  <h2>Punya pertanyaan?</h2>
-  <p>Jangan ragu untuk menghubungi kami dan biarkan tim kami membantu Anda.</p>
-  <a href="#" class="btn-footer">HUBUNGI KAMI</a>
-  <a href="https://wa.me/6281247827308" target="_blank" class="btn-footer">HUBUNGI VIA WHATSAPP</a>
+<h2>Punya pertanyaan?</h2>
+<p>Jangan ragu untuk menghubungi kami dan biarkan tim kami membantu Anda.</p>
+<a class="btn-footer" href="#">HUBUNGI KAMI</a>
+<a class="btn-footer" href="https://wa.me/6281247827308" target="_blank">HUBUNGI VIA WHATSAPP</a>
 </section>
-
 <footer>
-  <p>&copy; 2025 District M. Hunian Modern & Alami.</p>
+<p>© 2025 District M. Hunian Modern &amp; Alami.</p>
 </footer>
 
+<script>
+document.getElementById("openMasterplan").onclick = function() {
+  document.getElementById("masterplanModal").style.display = "block";
+};
+document.querySelector(".close").onclick = function() {
+  document.getElementById("masterplanModal").style.display = "none";
+};
+window.onclick = function(event) {
+  if (event.target === document.getElementById("masterplanModal")) {
+    document.getElementById("masterplanModal").style.display = "none";
+  }
+};
+</script>
 </body>
 </html>
