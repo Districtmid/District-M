@@ -393,9 +393,17 @@
 .close:hover {
   color: #bbb;
 }
+.fade-out {
+  opacity: 1;
+  transition: opacity 0.6s ease;
+}
+
+.fade-out.hide {
+  opacity: 0;
+}
 </style>
 </head>
-<body>
+<body class="fade-out">
 <nav>
 <h2>
 <img alt="Logo District M" src="logo-districtm.png"/>
@@ -548,6 +556,22 @@ window.onclick = function(event) {
     document.getElementById("masterplanModal").style.display = "none";
   }
 };
+</script>
+<script>
+  document.querySelectorAll(".btn-detail").forEach(function(button) {
+    button.addEventListener("click", function(e) {
+      e.preventDefault();
+      const link = this.href;
+      document.body.classList.add("hide");
+      setTimeout(function() {
+        window.location.href = link;
+      }, 600);
+    });
+  });
+
+  window.onload = function() {
+    document.body.classList.remove("hide");
+  };
 </script>
 </body>
 </html>
