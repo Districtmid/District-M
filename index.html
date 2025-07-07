@@ -401,6 +401,54 @@
 .fade-out.hide {
   opacity: 0;
 }
+
+.p-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.p-tab {
+  background-color: #7cbb00;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+.p-tab:hover {
+  background-color: #689d00;
+}
+.p-detail-wrapper {
+  position: relative;
+  height: 100px;
+  overflow: hidden;
+}
+.p-detail {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: all 0.4s ease;
+  background: #f5fce8;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+.p-detail.active {
+  left: 0;
+  opacity: 1;
+  z-index: 1;
+}
+.p-detail.exit {
+  left: -100%;
+  opacity: 0;
+  z-index: 0;
+}
 </style>
 </head>
 <body class="fade-out">
@@ -422,16 +470,28 @@
 </header>
 <section class="advantages" id="advantages">
 <h2>8P District M Advantages</h2>
-<ul>
-<li><strong>PRODUCT:</strong> Tenang, Aman, Gate System, 24 Jam Security, Bebas Banjir &amp; Longsor, View Gunung Klabat.</li>
-<li><strong>PAPER:</strong> Sertifikat &amp; IMB per unit.</li>
-<li><strong>PLACE:</strong> Dekat Unklab, MIS, Rumah Ibadah, RS, Transmart.</li>
-<li><strong>PRICE:</strong> Terjangkau &amp; Investasi Bernilai Tinggi.</li>
-<li><strong>PROVISION:</strong> Shuttlebus, Swimming Pool, Function Room, Sportplex, Chapel.</li>
-<li><strong>PERMANENT TENANT:</strong> Komunitas Multinasional, Suasana Berbahasa Inggris.</li>
-<li><strong>PAYMENT TERM:</strong> Diskon &amp; Voucher Khusus di Fasilitas District M.</li>
-<li><strong>POST SALES:</strong> Bebas Biaya Fasilitas (Kolam Renang, Fitness, Sport Hall).</li>
-</ul>
+
+
+<div class="p-nav">
+<button class="p-tab" data-tab="product">PRODUCT</button>
+<button class="p-tab" data-tab="paper">PAPER</button>
+<button class="p-tab" data-tab="place">PLACE</button>
+<button class="p-tab" data-tab="price">PRICE</button>
+<button class="p-tab" data-tab="provision">PROVISION</button>
+<button class="p-tab" data-tab="tenant">PERMANENT TENANT</button>
+<button class="p-tab" data-tab="payment">PAYMENT TERM</button>
+<button class="p-tab" data-tab="post">POST SALES</button>
+</div>
+<div class="p-detail-wrapper">
+<div class="p-detail" id="product">Tenang, Aman, Gate and One Gate System, 24 Jam Security Guards, Bebas Banjir dan Tanah longsor, Batu alam pada Carport dan Dinding luar, Landscape dan Lampu taman, semua type 3KT, min 2KM tempat cuci setrika, Rumah sudah tersedia, View Gunung Klabat. &amp; Longsor, View Gunung Klabat.</div>
+<div class="p-detail" id="paper">Sertifikat sudah dipecah per unit &amp; IMB, juga PBB per unit.</div>
+<div class="p-detail" id="place">Dekat sarna umum, Rumah Ibadah,Airport, Rumah sakit, SPBU, Pasar basah, Transmart juga Freshmart, Dekat sarana Pendidikan Unklab, MIS, Politeknik etc.</div>
+<div class="p-detail" id="price">Harga Terjangkau dengan nilai Investasi Bernilai Tinggi &amp; terus naik.</div>
+<div class="p-detail" id="provision">Shuttlebus, Central Water System dilengkapi dengan Swimming Pool, Function Room, Sportplex, Chapel, M Mart, akan dibangun Water Park.</div>
+<div class="p-detail" id="tenant">Penghuni dari manca Negara, Komunitas Multinasional, Suasana Berbahasa Inggris.</div>
+<div class="p-detail" id="payment">Diskon &amp; Voucher Khusus di Fasilitas District M, Seperti.</div>
+<div class="p-detail" id="post">Bebas Biaya Fasilitas (Kolam Renang, Fitness, Sport Hall).</div>
+</div>
 </section>
 <section class="fasilitas-section" id="fasilitas">
 <div class="container-fasilitas">
@@ -483,19 +543,19 @@
 <img alt="Misawa" src="misawa.jpg"/>
 <h3>Misawa – Tipe 60/102</h3>
 <p>Desain minimalis, fungsional &amp; nyaman.</p>
-<a class="btn-detail" href="/District-M/misawa.html">Lihat Detail</a>
+<a class="btn-detail" href="/District-M/misawa.html" target="_blank">Lihat Detail</a>
 </div>
 <div class="house-type">
 <img alt="Mishawaka" src="mishawaka.jpg"/>
 <h3>Mishawaka – Tipe 114/102</h3>
 <p>Lebih luas, ideal untuk keluarga besar.</p>
-<a class="btn-detail" href="/District-M/mishawaka.html">Lihat Detail</a>
+<a class="btn-detail" href="/District-M/mishawaka.html" target="_blank">Lihat Detail</a>
 </div>
 <div class="house-type">
 <img alt="Mission" src="mission.jpg"/>
 <h3>Mission – Tipe 60/102</h3>
 <p>Efisien &amp; nyaman untuk gaya hidup modern.</p>
-<a class="btn-detail" href="/District-M/mission.html">Lihat Detail</a>
+<a class="btn-detail" href="/District-M/mission.html" target="_blank">Lihat Detail</a>
 </div>
 </div>
 </section>
@@ -522,8 +582,6 @@
 <span class="close">×</span>
 <img alt="Masterplan District M" class="modal-content" id="masterplanImg" src="img/masterplan-districtm.jpg"/>
 </div>
-
-
 <section class="section" id="galeri">
 <h2>Galeri</h2>
 <div class="gallery">
@@ -543,7 +601,6 @@
 <footer>
 <p>© 2025 District M. Hunian Modern &amp; Alami.</p>
 </footer>
-
 <script>
 document.getElementById("openMasterplan").onclick = function() {
   document.getElementById("masterplanModal").style.display = "block";
@@ -558,20 +615,36 @@ window.onclick = function(event) {
 };
 </script>
 <script>
-  document.querySelectorAll(".btn-detail").forEach(function(button) {
-    button.addEventListener("click", function(e) {
-      e.preventDefault();
-      const link = this.href;
-      document.body.classList.add("hide");
-      setTimeout(function() {
-        window.location.href = link;
-      }, 600);
-    });
-  });
+const tabs = document.querySelectorAll(".p-tab");
+const details = document.querySelectorAll(".p-detail");
+let activeId = null;
 
-  window.onload = function() {
-    document.body.classList.remove("hide");
-  };
+tabs.forEach(tab => {
+  tab.addEventListener("click", () => {
+    const targetId = tab.getAttribute("data-tab");
+
+    if (activeId === targetId) {
+      // Jika klik tab yang sama, maka tutup
+      details.forEach(detail => {
+        detail.classList.remove("active");
+        detail.classList.add("exit");
+      });
+      activeId = null;
+    } else {
+      // Jika klik tab yang berbeda, tampilkan yang baru
+      details.forEach(detail => {
+        if (detail.id === targetId) {
+          detail.classList.add("active");
+          detail.classList.remove("exit");
+        } else {
+          detail.classList.remove("active");
+          detail.classList.add("exit");
+        }
+      });
+      activeId = targetId;
+    }
+  });
+});
 </script>
-</body>
+</script></body>
 </html>
